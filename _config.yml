@@ -46,3 +46,5 @@ disqus:
   shortname: prmadi
 
 show_excerpts: true
+
+google_analytics: UA-140888011-1
