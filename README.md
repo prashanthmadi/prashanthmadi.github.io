@@ -1,2 +1,2 @@
-# prashanthmadi.github.io
-My Way of Life
+# Prashanth Madi Blog
+Documenting my learnings in day to day life
