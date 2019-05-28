@@ -1,0 +1,14 @@
+---
+layout: post
+title: About Us
+date: '2016-07-25 01:23:50'
+---
+
+![Ramya Gangula](/content/images/2016/08/pokeman.png)
+
+My name is Ramya Gangula, I work as Android developer at GM financials. Before GM i worked at Samsung. The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.
+
+![Prashanth Madi](/content/images/2016/08/avatar.jpeg)   
+
+My name is Prashanth Madi. I'm a programmer and Tech enthusiast. I work out of my office in Dallas,TX for the OpenSource Support Team at Microsoft, but this blog, its content and opinions are my own. I blog about technology, culture, gadgets, diversity, code, the web, where we're going and where we've been. I'm excited about community, social equity, media, entrepreneurship and above all, the open web.
+

@@ -1,0 +1,110 @@
+---
+layout: post
+title: using git
+date: '2012-03-01 08:44:00'
+---
+
+**installing : ** 
+sudo apt-get install git 
+
+**setting up:** 
+git config --global user.name "prashanthmadi" 
+git config --global user.email "prashanthrmadi@gmail.com" 
+
+this will generate ~/.gitconfig file 
+
+**initiallize git :** 
+
+you can clone existing git project by using 
+
+* git clone url
+
+create  a new project by entering into a directory and enter
+
+* git init
+
+**to add files to git use** 
+
+* git add file1 file2
+
+or else add all of them at once by 
+
+-> git commit -a // this will add all the files at once 
+
+-> git add . // not sure check this command 
+
+You are now ready to commit. You can see what is about to be committed using git diff$ git diff --cached
+
+(Without --cached,  will show you any changes that you've made but not yet added to the index.) You can also get a brief summary of the situation with : 
+
+[git status](http://www.kernel.org/pub/software/scm/git/docs/git-status.html)**ignoring some files** 
+
+get into top level of working directory and create file named .gitignore 
+
+`foo.txt // to remove any file named as foo.txt` 
+`*.html // to remove all files ending with html` 
+
+`**creating new branch**`
+
+* `git branch new_branch_name`
+
+**to watch all the branches** 
+
+* git branch
+
+**to switch between branches** 
+
+* git checkout branch_name
+
+**merge two branches using merge option** 
+
+* git merge branch_name   // do this when u are in another branch
+
+**two people working on same project** 
+
+A         -----   >            B 
+
+Scenario  1: 
+
+consider two users as above.  A has a git  and B wants to make changes to it. 
+
+* B will clone the project using clone command
+* B will make required changes and commit them
+* B says A about his changes.
+* A will issue a pull command   as    _git pull project_url_of_b_
+
+Scenario 2: (defining remote repository) 
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; color: #333333; font-family: 'andale mono', 'lucida console', monospace; font-size: 14px; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">
+
+* git remote add new_user new_user_url
+
+* git fetch 
+
+this is a bit confusing update this scenario later.....</pre>
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; color: #333333; font-family: 'andale mono', 'lucida console', monospace; font-size: 14px; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">**To get only the changes from previously existing git**</pre>
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; color: #333333; font-size: 14px; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">
+
+* git pull URL
+
+</pre>
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; color: #333333; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">A general scenario of working with team happens as we release a public version in some repository. while we still work on current repository and someone else sends you changes</pre>
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">DEV-REPO --- > PUBLIC-REPO</pre>
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">PUBLIC_REPO --- downloaded by another person -- > DEV2-REPO</pre>
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">after some changes in DEV2-REPO</pre>
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">DEV2-REPO --- > PUBLIC2-REPO</pre>
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">PUBLIC2-REPO --- > DEV-REPO // merge</pre>
+
+<pre style="background-attachment: initial !important; background-clip: initial !important; background-color: white; background-image: initial !important; background-origin: initial !important; border-bottom-width: 0px; border-color: initial; border-image: initial; border-left-width: 0px; border-right-width: 0px; border-style: initial; border-top-width: 0px; line-height: 21px; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; text-align: -webkit-auto; vertical-align: baseline;">
+
+* git push public-repo master // to send into public repositories
+
+</pre>

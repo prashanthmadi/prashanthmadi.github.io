@@ -1,0 +1,11 @@
+---
+layout: post
+title: Cake php
+date: '2010-08-30 17:02:00'
+---
+
+i got some code of cake php which i need to deploy in  my server. it uses mvc(model, view,control) architecture.. 
+
+an example to do this is as follows.. 
+
+http://book.cakephp.org/view/1528/Blog

@@ -1,0 +1,35 @@
+---
+layout: post
+title: mummer
+date: '2011-03-25 20:37:00'
+tags:
+- bio_informatics
+---
+
+url: http://sourceforge.net/projects/mummer/files/ 
+Download MUMmer3.22.tar.gz 
+
+Installation 
+
+Follow these instructions only if you downloaded the package. 
+$ tar zxvf MUMmer3.22.tar.gz 
+$ cd MUMmer3.22 
+$ make 
+When i ran make make check, it gave a error saying 
+$ make check 
+csh: not found 
+ERROR: 'csh' C-shell not found 
+check complete 
+Follow the steps below only if u get the above error. 
+$ sudo apt-get install csh 
+Now continue with the installation 
+$ make check 
+$ sudo make install 
+Testing 
+
+All the commands below must be present 
+$ mummer 
+$ nucmer 
+$ promer 
+$ run-mummer1 
+$ run-mummer3

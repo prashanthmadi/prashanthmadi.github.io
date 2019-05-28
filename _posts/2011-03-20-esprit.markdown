@@ -1,0 +1,100 @@
+---
+layout: post
+title: esprit
+date: '2011-03-20 01:26:00'
+tags:
+- bio_informatics
+---
+
+ESPRIT :: Installation :: Cluster 
+Obtain the source code 
+
+On *nix, Steps to install ESPRIT 
+$ unzip ESPRIT_distribution.zip 
+$ cd ESPRIT_distribution 
+
+Read, esprit_user_guide.pdf and README.txt 
+$ cd source 
+$ vim Makefile 
+Choose the platform by uncomment/comment 
+
+To make the package 
+$ make esprit_cc 
+
+Its always better to 
+$ make clean 
+$ make esprit_cc 
+
+Precaution: 
+- make sure that the fasta file has header in one and the sequence in one line 
+- if the sequence is in multiple lines, convert the file to contain just one line of sequence 
+
+Pseudocode is followed here using shell scripting and clusterjobmanager 
+Copy the sequence file here, If you have more than one than group them. 
+$ cp /path/to/sequence.fas . 
+
+To run preproc 
+$ /path/to/ESPRIT_distribution/source/preproc -f sequence.fas 
+160794 Seqs Match Primer 
+160794 Seqs Valid Len 
+
+31072 Seqs After Process 
+1.63 secs in Purging Strings. 
+
+flag: 
+-f this prevents the program from trimming. 
+
+Files created: 
+sequence_Clean.fas 
+sequence_Clean.frq 
+
+To check 
+$ awk -F' ' '{ s+=$2 } END { print s }' sequence_Clean.frq 
+160794 
+$ grep -c '>' sequence.fas 
+160794 
+- Make sure that these numbers are same. 
+
+To run kmerdist_par 
+$ cat submit_kmer_jobs.sh 
+for i in $(seq 1 10) 
+do 
+for j in $(seq $i 10) 
+do 
+job="/path/to/ESPRIT_distribution/source/kmerdist_par sequence_Clean.fas 10 $i $j\n "; 
+RANDOM=10 
+num=$RANDOM 
+echo -e $job > kmer_job_$num.clusterJob 
+clusterJobSubmission < kmer_job_$num.clusterJob done done - where clusterJobSubmission is your cluster job submission manager - the extension .clusterJob can be replaced with the extension required - variable job can include other details if required. $ cat jobs.clusterJob ## .. sh submit_kmer_jobs.sh $ jobsubmit < jobs. clusterJob - this will submit the job. Output: sequence_Clean_[*]_[*].dist - make sure that numbers are 1_[1-10], 2_[2-10], 3_[3-10], 4_[4-10], 5_[5-10], 6_[6-10], 7_[7-10], 8_[8-10], 9_[9-10], 10_10 Merge all the .dist files $ cat sequence_Clean_*.dist >> kmer.dist 
+
+Split the kmer files into 100 files 
+$ /path/to/ESPRIT_distribution/source/splitdist -s 100 kmer.dist 
+Counting Total Records.... 
+71249223 Records Found, Splitting... 
+
+Output: 
+kmer.dist_[0-99] 
+
+Submit parallel jobs for needle_dist 
+$ cat submit_needle_job.sh 
+for i in $(seq 0 99) 
+do 
+job="/path/to/ESPRIT_distribution/source/needledist sequence_Clean.fas kmer.dist\_$i needle.dist\_$i\n "; 
+RANDOM=10 
+num=$RANDOM 
+echo -e $job > needle_job_$num.clusterJob 
+clusterJobSubmission < needle_job_$num.clusterJob done Output needle.dist_[0-99] Group all the needle.dist files $ cat needle.dist_* >> sequence.ndist 
+
+To run hcluster 
+$ /path/to/ESPRIT_distribution/source/hcluster -t 15000 sequence.ndist sequence_Clean.frq 
+- flag -t is used to increase the size of the linked table, default is 10000 
+
+Output 
+sequence.ndist_sort 
+sequence.OTU 
+sequence.Outliers 
+sequence.Rarefaction 
+sequence.Cluster 
+sequence.Cluster_List 
+sequence.ACE 
+sequence.CHAO1
