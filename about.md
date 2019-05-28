@@ -11,7 +11,7 @@ My name is Prashanth Madi. I'm a programmer and Tech enthusiast. I work out of m
 
 ## Books
 
-### Career Success :
+#### Career Success :
 
 * The New One Minute Manager [Link](https://www.amazon.com/New-One-Minute-Manager/dp/0062367544/) 
     * Helped me understand how to work with managers and set expectations up-front.
@@ -25,24 +25,24 @@ Recommended books that i haven't read yet..
 * The Everything Store: Jeff Bezos and the Age of Amazon [Link](https://www.amazon.com/Everything-Store-Jeff-Bezos-Amazon/dp/0316219282/)
 
 
-##Video's
+## Video's
 
 Here are some Great Video's I came across in my life. I thought they are worth sharing and might help someone starting fresh. 
 
-### General great advice on life:
+#### General great advice on life:
 
 * [The Last Lecture](https://www.youtube.com/watch?v=j7zzQpvoYcQ), by Randy Pausch, its [Oprah Show Reprise](https://www.youtube.com/watch?v=p1CEhH5gnvg), and its [related media coverage](http://www.cs.virginia.edu/robins/Randy), 2007.
 * [Time Management](https://www.youtube.com/watch?v=blaK_tB_KQA) by Randy Pausch and its [Powerpoint slides](http://www.cs.virginia.edu/~robins/Randy_Time_Management_UVa_2007_slides.html), 2007.
 * [The Internet's Own Boy: The Story of Aaron Swartz](https://www.youtube.com/watch?v=M85UvH0TRPc)
 
-### Computer Science
+#### Computer Science
 * [Paul Erdos - N is a number](https://www.youtube.com/watch?v=zRNGV85kPbI)
 * [Claude Shannon - Father of the Information Age](https://www.youtube.com/watch?v=z2Whj_nL-x8)
 * [Alan Kay at OOPSLA 1997 - The computer revolution hasnt happened yet](https://www.youtube.com/watch?v=oKg1hTOQXoY)
 
 ### Courses I liked in [coursera.org](https://www.coursera.org/):
 
-#### History 
+##### History 
 * A History of the World since 1300
 Probably the Best Course i took but its no longer available on Coursera
 
