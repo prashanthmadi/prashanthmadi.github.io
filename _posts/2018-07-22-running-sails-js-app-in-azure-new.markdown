@@ -3,7 +3,6 @@ layout: post
 title: Running Sails.js app in Azure App Service Linux with Continuous Deployment
 date: '2018-07-22 06:23:01'
 previewimg: '/content/images/2018/07/installations.png'
-previewimg: 'https://prmadi.com/content/images/2018/07/installations.png'
 ---
 
 Sails makes it easy to build custom, enterprise-grade Node.js apps. Sails is 100% javascript.
