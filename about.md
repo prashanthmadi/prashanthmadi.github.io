@@ -42,7 +42,7 @@ Here are some Great Video's I came across in my life. I thought they are worth s
 
 ### Courses I liked in [coursera.org](https://www.coursera.org/):
 
-##### History 
+#### History 
 * A History of the World since 1300
 Probably the Best Course i took but its no longer available on Coursera
 
@@ -58,7 +58,7 @@ This Course will discuss the emergence of the modern Middle East from the fall o
 * [Functional Programming in Scala Specialization](https://www.coursera.org/specializations/scala)
 Think this as a fresh air out of your day to day programming life. I was mesmerized by course content and it gave me new thinking of how i look at an issue.
 * [Programming for Everybody](https://www.coursera.org/learn/python) (Getting Started with Python)
-A good course for someone trying to learn python. Here is a better Python Tutorial from Google -  https://www.youtube.com/watch?v=tKTZoB2Vjuk
+A good course for someone trying to learn python. Here is a better Python Tutorial from Google -  [Link](https://www.youtube.com/watch?v=tKTZoB2Vjuk)
 
 
 #### Management
