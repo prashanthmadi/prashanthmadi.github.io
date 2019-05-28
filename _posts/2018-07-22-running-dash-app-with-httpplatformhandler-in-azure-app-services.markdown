@@ -2,6 +2,7 @@
 layout: post
 title: Running Dash app with HttpPlatformHandler in Azure App Services Windows
 date: '2018-07-22 22:47:37'
+previewimg: 'https://prmadi.com/content/images/2018/10/dash.jpg'
 ---
 
 Dash is a Open Source Python library for creating reactive, Web-based applications. Dash is a user interface library for creating analytical web applications. 
