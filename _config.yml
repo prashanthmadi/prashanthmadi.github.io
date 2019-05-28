@@ -16,7 +16,7 @@
 title: My Way Of Life
 email: prashanthrmadi@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-I'm a programmer & Tech enthusiast. I work for Big Data Support Team at Microsoft, but this blog, its content & opinions are my own. I blog about tech, gadgets, code, where I'm going & I've been.
+  I'm a programmer & Tech enthusiast. I work for Big Data Support Team at Microsoft, but this blog, its content & opinions are my own. I blog about tech, gadgets, code, where I'm going & I've been.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://prashanthmadi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: prashanthmadi
