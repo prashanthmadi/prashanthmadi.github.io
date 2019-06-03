@@ -19,14 +19,14 @@ This article shows how to run Python Webjob on Azure App Services using non-defa
 * Upload the app
 * Install dependencies
 
-##### Create a sample app in local
+#### Create a sample app in local
 ex: **start.py**
 ```
 import sys
 print(sys.version)
 ```
 
-##### Create Azure WebApp and Use Site Extension to Upgrade Python
+#### Create Azure WebApp and Use Site Extension to Upgrade Python
 
 * Navigate to [Azure portal](https://portal.azure.com/)
 * Create a new web app
@@ -36,7 +36,7 @@ print(sys.version)
 
 For this blog I'm choosing `Python 3.5.2 x64`, It would install new version of python @ D:\home\Python35
 
-##### Add run.cmd file to change default Python version
+#### Add run.cmd file to change default Python version
 To give little background,
 We use the following logic to decide which file is the script to run within the job's directory:
 
@@ -53,7 +53,7 @@ D:\home\Python35\python.exe start.py
 ```
 you can use any other file instead of `start.py` and python version above as per your requirement.
 
-##### Upload the app
+#### Upload the app
 * zip all your app content in local
 * Navigate to [Azure portal](https://portal.azure.com/)
 * Navigate to your App Service blade, select WebJobs and then Add.
@@ -64,6 +64,6 @@ you can use any other file instead of `start.py` and python version above as per
 * Below is my webjob output, where i'm printing python version used to run it
 ![Webjob Output](/content/images/2016/11/webjob3.PNG)
 
-##### Install dependencies
+#####Install dependencies
 Refer Below link for details
 http://prmadi.com/install-python-modules-on-azure-app-services/
